@@ -1,9 +1,11 @@
 #Activar entorno
-.\venv\Scripts\Activate.ps1
+venv\Scripts\activate
 
 #Desactivar entorno
 deactivate
 
+#Instalar todas las dependencias
+pip install -r requirements.txt
 
 #Ejecutar servidor
 uvicorn app.main:app --reload
