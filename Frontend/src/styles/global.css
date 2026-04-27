@@ -1,0 +1,138 @@
+#dashboard {
+  background-color: #344560; 
+}
+
+.dashboard-container {
+  padding: 20px;
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* KPI SECTION */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.kpi-card {
+  background-color: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.kpi-card h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.kpi-card p {
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.status-ok {
+  color: #10b981;
+}
+
+/* CHART GRID */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.chart-card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  /* max-height: 75vh; */
+}
+
+.recent-table-container {
+  color: #ffffff;
+}
+
+.recent-table-title {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+/* wrapper para scroll horizontal */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  max-height: 75vh;
+}
+
+/* tabla base */
+.recent-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  /* min-width: 900px; */
+}
+
+/* header */
+.recent-table thead {
+  background-color: #0f172a;
+}
+
+.recent-table th {
+  text-align: left;
+  padding: 12px;
+  color: #94a3b8;
+  font-size: 13px;
+  border-bottom: 1px solid #334155;
+}
+
+/* rows */
+.recent-table td {
+  padding: 12px;
+  border-bottom: 1px solid #334155;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+/* hover effect */
+.recent-table tbody tr:hover {
+  background-color: #334155;
+  transition: background 0.2s ease;
+}
+
+/* URL truncation */
+.url-cell {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* score badges (opcional para siguiente paso) */
+.score-high {
+  color: #ef4444;
+  font-weight: bold;
+}
+
+.score-medium {
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.score-low {
+  color: #10b981;
+  font-weight: bold;
+}
