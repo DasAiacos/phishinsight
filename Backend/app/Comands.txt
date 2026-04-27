@@ -1,0 +1,12 @@
+#Activar entorno
+.\venv\Scripts\Activate.ps1
+
+#Desactivar entorno
+deactivate
+
+
+#Ejecutar servidor
+uvicorn app.main:app --reload
+
+#Borra db
+del phishinsight.db
