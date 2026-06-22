@@ -6,8 +6,6 @@ services:
     container_name: phishinsight-backend
     ports:
       - "8000:8000"
-    volumes:
-      - sqlite_data:/app/data
 
   frontend:
     build:
@@ -17,6 +15,3 @@ services:
       - "5173:5173"
     depends_on:
       - backend
-
-volumes:
-  sqlite_data:
