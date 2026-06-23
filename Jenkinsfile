@@ -26,14 +26,9 @@ pipeline {
     }
   }
 
-    stage('Docker Test') {
-    steps {
-        sh 'docker ps'
-    }
-    }
-
   post {
     always {
+      sh 'docker compose down'
       echo 'Pipeline ejecutado'
     }
 
