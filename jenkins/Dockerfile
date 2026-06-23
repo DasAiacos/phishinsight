@@ -14,6 +14,11 @@ RUN mkdir -p /usr/local/lib/docker/cli-plugins && \
     -o /usr/local/lib/docker/cli-plugins/docker-compose && \
     chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 
+# Actualizar buildx (el de apt es muy viejo y "docker compose build" lo requiere >=0.17.0)
+RUN curl -SL https://github.com/docker/buildx/releases/download/v0.19.3/buildx-v0.19.3.linux-amd64 \
+    -o /usr/local/lib/docker/cli-plugins/docker-buildx && \
+    chmod +x /usr/local/lib/docker/cli-plugins/docker-buildx
+
 # Dar permisos al usuario jenkins para usar el socket de Docker
 RUN usermod -aG docker jenkins
 
