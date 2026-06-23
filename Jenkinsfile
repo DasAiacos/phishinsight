@@ -7,6 +7,12 @@ pipeline {
 
   stages {
 
+    stage('Cleanup Previous Run') {
+      steps {
+        sh 'docker compose down --remove-orphans || true'
+      }
+    }
+
     stage('Build Docker Images') {
       steps {
         sh 'docker compose build'
